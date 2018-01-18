@@ -18,14 +18,14 @@
 		},
 		"droptica-droopler": {
 		    "type": "git",
-            "url":  "dev-feature/issue_30764"
+            "url":  "git@github.com:droptica/droopler.git"
 		}
 	},
 	"require": {
 		"composer/installers": "^1.2",
 		"oomphinc/composer-installers-extender": "^1.1",
 		"cweagans/composer-patches": "^1.6",
-		"droptica/droopler": "^8.1.0-alpha1",
+		"droptica/droopler": "dev-feature/issue_30764",
 		"drupal-composer/drupal-scaffold": "^2.2",
 		"drupal/console": "~1.0",
 		"drupal/core": "~8.4",
