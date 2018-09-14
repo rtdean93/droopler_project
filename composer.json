@@ -70,11 +70,11 @@
 	"extra": {
 		"installer-types": ["library", "bower-asset", "npm-asset"],
 		"installer-paths": {
-			"web/core": ["type:drupal-core"],
-			"web/libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
-			"web/modules/contrib/{$name}": ["type:drupal-module"],
-			"web/profiles/contrib/{$name}": ["type:drupal-profile"],
-			"web/themes/contrib/{$name}": ["type:drupal-theme"],
+			"core": ["type:drupal-core"],
+			"libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
+			"modules/contrib/{$name}": ["type:drupal-module"],
+			"profiles/contrib/{$name}": ["type:drupal-profile"],
+			"themes/contrib/{$name}": ["type:drupal-theme"],
 			"drush/contrib/{$name}": ["type:drupal-drush"]
 		}
 	}
