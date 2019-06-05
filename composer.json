@@ -19,13 +19,14 @@
 	},
 	"require": {
 		"composer/installers": "^1.2",
-		"oomphinc/composer-installers-extender": "^1.1",
 		"cweagans/composer-patches": "^1.6",
 		"droptica/droopler": "dev-develop",
 		"drupal-composer/drupal-scaffold": "^2.2",
 		"drupal/console": "~1.0",
 		"drupal/core": "^8.6.3",
+		"drupal/eu_cookie_compliance": "^1.5",
 		"drush/drush": "~8.0",
+		"oomphinc/composer-installers-extender": "^1.1",
 		"webflo/drupal-finder": "^1.0.0",
 		"webmozart/path-util": "^2.3"
 	},
