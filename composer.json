@@ -26,7 +26,8 @@
 		"drupal/core-recommended": "^8.8",
 		"drush/drush": "~9.0",
 		"oomphinc/composer-installers-extender": "^1.1",
-		"zaporylie/composer-drupal-optimizations": "^1.1"
+		"zaporylie/composer-drupal-optimizations": "^1.1",
+        "drupal/commerce": "^2.17"
 	},
     "require-dev": {
         "drupal/core-dev": "^8.8",
