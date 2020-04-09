@@ -1,0 +1,5 @@
+d_baselinker_ifirma.configuration:
+  route_name: d_baselinker_ifirma.configuration
+  title: 'Ifirma'
+  base_route: d_baselinker.configuration
+  weight: 5

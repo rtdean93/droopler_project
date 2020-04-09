@@ -1,0 +1,4 @@
+manage baselinker:
+  title: 'Manage baselinker configuration'
+  description: 'Allows user to configure Baselinker connection'
+  restrict access: TRUE

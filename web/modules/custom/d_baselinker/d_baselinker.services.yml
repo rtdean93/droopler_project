@@ -1,0 +1,12 @@
+services:
+  d_baselinker.orders_service:
+    class: Drupal\d_baselinker\OrdersService
+    arguments: ['@entity_type.manager','@config.factory','@d_baselinker.utility_service']
+  d_baselinker.products_service:
+    class: Drupal\d_baselinker\ProductsService
+    arguments: ['@entity_type.manager']
+  d_baselinker.utility_service:
+    class: Drupal\d_baselinker\UtilityService
+    arguments: ['@config.factory']
+  d_baselinker.curl_service:
+    class: Drupal\d_baselinker\CurlService

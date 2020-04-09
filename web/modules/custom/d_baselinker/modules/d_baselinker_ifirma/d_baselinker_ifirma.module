@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_cron to update invoices on marked orders.
+ */
+function d_baselinker_ifirma_cron() {
+  $config = \Drupal::service('config.factory')->get('d_baselinker.settings');
+  user_login_finalize(Drupal\user\Entity\User::load($config->get('baselinker_user')));
+  Drupal::logger('d_baselinker_ifirma.cron')
+    ->notice("Cron executed");
+  $entityTypeManager = \Drupal::service('entity_type.manager');
+  $ordersToUpdate = $entityTypeManager->getStorage('commerce_order')
+    ->getQuery()
+    ->condition('update_invoice', 1, '=')
+    ->execute();
+  foreach ($ordersToUpdate as $revision => $orderId) {
+    $order = \Drupal\commerce_order\Entity\Order::load($orderId);
+
+    $file = \Drupal::service('d_baselinker_ifirma.invoice_service')
+      ->prepareInvoice(
+        $order->get('invoice_number')->value
+      );
+    if (!empty($file)) {
+      $order->set('invoice', $file);
+      $order->set('update_invoice', 0);
+      $order->save();
+      \Drupal::logger('d_baselinker_ifirma.cron')
+        ->notice("Updated order: {$orderId}");
+    }
+  }
+}

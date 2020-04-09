@@ -1,0 +1,15 @@
+d_baselinker_ifirma.main:
+  path: '/baselinker/invoice'
+  defaults:
+    _controller: '\Drupal\d_baselinker_ifirma\Controller\InvoiceController::main'
+    _title: 'GetInvoice'
+  requirements:
+    _permission: 'access content'
+    
+d_baselinker_ifirma.configuration:
+  path: '/admin/config/baselinker/ifirma'
+  defaults:
+    _form: '\Drupal\d_baselinker_ifirma\Form\IfirmaConfigurationForm'
+    _title: 'Ifirma configuration'
+  requirements:
+    _permission: 'manage baselinker'

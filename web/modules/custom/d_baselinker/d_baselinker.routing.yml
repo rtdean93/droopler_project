@@ -1,0 +1,15 @@
+d_baselinker.main:
+  path: '/baselinker'
+  defaults:
+    _controller: '\Drupal\d_baselinker\Controller\BaseLinkerController::main'
+    _title: 'Baselinker init'
+  requirements:
+    _permission: 'access content'
+d_baselinker.configuration:
+  path: '/admin/config/baselinker'
+  defaults:
+    _form: '\Drupal\d_baselinker\Form\BaselinkerConfigurationForm'
+    _title: 'Baselinker configuration'
+  requirements:
+    _permission: 'manage baselinker'
+

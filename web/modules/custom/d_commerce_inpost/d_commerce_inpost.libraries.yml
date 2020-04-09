@@ -1,0 +1,10 @@
+d_commerce_inpost.geowidget:
+  css:
+    theme:
+      https://geowidget.easypack24.net/css/easypack.css: { type: external, minified: true }
+  js:
+    https://geowidget.easypack24.net/js/sdk-for-javascript.js: { type: external, minified: true }
+    js/init.js: { }
+  dependencies:
+    - core/drupal
+    - core/jquery

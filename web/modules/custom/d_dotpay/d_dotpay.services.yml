@@ -1,0 +1,4 @@
+services:
+  d_dotpay.api_operations:
+    class: Drupal\d_dotpay\DotpayAPIOperations
+    arguments: ['@http_client']

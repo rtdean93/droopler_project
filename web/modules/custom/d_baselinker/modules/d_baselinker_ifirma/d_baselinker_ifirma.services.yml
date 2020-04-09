@@ -1,0 +1,5 @@
+services:
+  d_baselinker_ifirma.invoice_service:
+    class: Drupal\d_baselinker_ifirma\InvoiceService
+    arguments: ['@d_baselinker.curl_service','@config.factory']
+

@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for d_commerce_inpost.
+ *
+ * @ingroup d_commerce_inpost
+ */
+

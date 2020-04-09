@@ -1,0 +1,84 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function d_baselinker_ifirma_install() {
+  $fields = [
+    'baselinker_order_id' => [
+      'storage' => [
+        'type' => 'string',
+      ],
+      'instance' => [
+        'label' => t('Baselinker order id'),
+      ],
+    ],
+    'invoice_number' => [
+      'storage' => [
+        'type' => 'string',
+      ],
+      'instance' => [
+        'label' => t('Invoice number'),
+      ],
+    ],
+    'invoice' => [
+      'storage' => [
+        'type' => 'file',
+      ],
+      'instance' => [
+        'label' => t('Invoice file'),
+        'settings' => [
+          'file_directory' => 'invoices',
+          'file_extensions' => 'pdf',
+        ],
+      ],
+    ],
+    'update_invoice' => [
+      'storage' => [
+        'type' => 'boolean',
+      ],
+      'instance' => [
+        'label' => t('Mark invoice for update'),
+      ],
+    ],
+  ];
+  foreach ($fields as $name => $field) {
+    add_field($name, $field);
+  }
+}
+
+/**
+ * Adds field to the Commerce order entity.
+ *
+ * @param string $field_name
+ *   Field name.
+ * @param array $field_settings
+ *   Array containing field settings.
+ */
+function add_field($field_name, $field_settings) {
+  $field = \Drupal\field\Entity\FieldConfig::loadByName('commerce_order', 'default', $field_name);
+  if (!$field) {
+    $field_storage = \Drupal\field\Entity\FieldStorageConfig::loadByName('commerce_order', $field_name);
+    if (!$field_storage) {
+      $field_storage = \Drupal\field\Entity\FieldStorageConfig::create(
+        [
+          'field_name' => $field_name,
+          'entity_type' => 'commerce_order',
+          'type' => $field_settings['storage']['type'],
+          'cardinality' => 1,
+        ]
+      );
+      $field_storage->save();
+    }
+    $instance_config = [
+      'field_storage' => $field_storage,
+      'bundle' => 'default',
+      'label' => $field_settings['instance']['label'],
+    ];
+    if (isset($field_settings['instance']['settings'])) {
+      $instance_config['settings'] = $field_settings['instance']['settings'];
+    }
+    $instance = \Drupal\field\Entity\FieldConfig::create($instance_config);
+    $instance->save();
+  }
+}

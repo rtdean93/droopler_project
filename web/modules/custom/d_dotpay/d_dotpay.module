@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Contains d_dotpay.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function d_dotpay_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the d_dotpay module.
+    case 'help.page.d_dotpay':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Integrates Dotpay payments') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function d_dotpay_theme($existing, $type, $theme, $path) {
+  return [
+    'payment_channel' => [
+      'variables' => [
+        'channelId' => NULL,
+        'channelName' => NULL,
+        'channelLogo' => NULL,
+      ],
+    ],
+  ];
+}

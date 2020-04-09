@@ -1,0 +1,20 @@
+langcode: pl
+status: true
+dependencies:
+  module:
+    - d_dotpay
+id: dotpay_blik
+label: Blik
+weight: -8
+plugin: d_dotpay_checkout
+configuration:
+  pin: e0vQxj4A6CdLI7EAvn4cLqxrLnVFIecr
+  seller_id: '770314'
+  api_version: dev
+  display_label: Blik
+  mode: test
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND

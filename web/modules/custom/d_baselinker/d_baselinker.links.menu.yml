@@ -1,0 +1,4 @@
+d_baselinker.configuration:
+  title: 'Baselinker configuration'
+  parent: system.admin_config
+  route_name: d_baselinker.configuration

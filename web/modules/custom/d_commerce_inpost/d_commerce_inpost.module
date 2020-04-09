@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Main file for the d_commerce_inpost module.
+ *
+ * @ingroup d_commerce_inpost
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Attaches the d_commerce_inpost/d_commerce_inpost library.
+ *
+ * @see hook_form_FORM_ID_alter()
+ * @inheritDoc
+ */
+function d_commerce_inpost_form_commerce_checkout_flow_abv_checkout_flow_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['#attached']['library'][] = 'd_commerce_inpost/d_commerce_inpost.geowidget';
+}

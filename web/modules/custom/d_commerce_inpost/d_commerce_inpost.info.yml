@@ -1,0 +1,4 @@
+name: 'Drupal Commerce InPost'
+type: module
+description: 'Drupal Commerce InPost.'
+core: 8.x
