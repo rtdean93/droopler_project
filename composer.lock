@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3b274565f585d0a8b1bcca2463c6277",
+    "content-hash": "8b76b21e4397aa4d8126f7a324abe9ac",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1992,9 +1992,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.8",
                     "datestamp": "1583988119",
@@ -2466,7 +2463,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce_baselinker.git",
-                "reference": "45f34fb9fab8ff7bba7ba13b870ce060dc8a47de"
+                "reference": "4dfdeb44cf09730093b5c4879c217544cac6b3d6"
             },
             "require": {
                 "drupal/commerce": "*",
@@ -2479,7 +2476,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1589197717",
+                    "datestamp": "1589279904",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2509,7 +2506,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce_baselinker"
             },
-            "time": "2020-05-11T12:17:13+00:00"
+            "time": "2020-05-12T10:47:52+00:00"
         },
         {
             "name": "drupal/commerce_dotpay",
@@ -2517,7 +2514,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce_dotpay.git",
-                "reference": "7cbf5fdc85a28c6a425ca3b2e010f461b87939b3"
+                "reference": "0e2db476e81271deb0ccb0d034f05a7586862f2e"
             },
             "require": {
                 "drupal/commerce": "*",
@@ -2531,7 +2528,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.x-dev",
-                    "datestamp": "1589182702",
+                    "datestamp": "1589277678",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2561,7 +2558,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/commerce_dotpay"
             },
-            "time": "2020-05-11T07:53:40+00:00"
+            "time": "2020-05-12T10:24:54+00:00"
         },
         {
             "name": "drupal/commerce_inpost",
@@ -3296,12 +3293,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "2419a0cd917be6562abdd219754288e6bd78ae7e"
+                "reference": "f2e149908b7047204b8da4af960ae588ed6ff85c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/2419a0cd917be6562abdd219754288e6bd78ae7e",
-                "reference": "2419a0cd917be6562abdd219754288e6bd78ae7e",
+                "url": "https://api.github.com/repos/drupal/core/zipball/f2e149908b7047204b8da4af960ae588ed6ff85c",
+                "reference": "f2e149908b7047204b8da4af960ae588ed6ff85c",
                 "shasum": ""
             },
             "require": {
@@ -3519,7 +3516,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-05-07T23:00:58+00:00"
+            "time": "2020-05-13T09:22:31+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
@@ -3979,6 +3976,117 @@
             }
         },
         {
+            "name": "drupal/facets_pretty_paths",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/facets_pretty_paths.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/facets_pretty_paths-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "c6660cd296dd68e2f22d42337035eca65ce94ffb"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/facets": "~1",
+                "drupal/pathauto": "~1"
+            },
+            "require-dev": {
+                "composer/installers": "^1.2",
+                "cweagans/composer-patches": "~1.4",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "drupal-composer/drupal-scaffold": "^2.2",
+                "drupal/admin_toolbar": "^1.24",
+                "drupal/coder": "^8.3",
+                "drupal/config_installer": "~1",
+                "drupal/console": "~1",
+                "drupal/search_api": "~1.5",
+                "drush/drush": "~9",
+                "openeuropa/drupal-core-require-dev": "~8.6@rc",
+                "openeuropa/task-runner": "~1.0-beta2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1568102885",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "composer-exit-on-patch-failure": true,
+                "enable-patching": true,
+                "installer-paths": {
+                    "build/core": [
+                        "type:drupal-core"
+                    ],
+                    "build/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "build/profiles/contrib/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "build/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\facets_pretty_paths\\": "./src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Drupal\\Tests\\facets_pretty_paths\\": "./tests/src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "drupal-scaffold": [
+                    "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+                ],
+                "post-install-cmd": [
+                    "./vendor/bin/run drupal:site-setup"
+                ],
+                "post-update-cmd": [
+                    "./vendor/bin/run drupal:site-setup"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "All contributors",
+                    "homepage": "https://www.drupal.org/node/2625160/committers"
+                },
+                {
+                    "name": "Upchuk",
+                    "homepage": "https://www.drupal.org/user/1885838"
+                },
+                {
+                    "name": "dasjo",
+                    "homepage": "https://www.drupal.org/user/228295"
+                }
+            ],
+            "description": "Facets Pretty Paths module.",
+            "homepage": "https://www.drupal.org/project/facets_pretty_paths",
+            "keywords": [
+                "drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/facets_pretty_paths"
+            }
+        },
+        {
             "name": "drupal/features",
             "version": "3.8.0",
             "source": {
@@ -4303,9 +4411,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-rc3",
                     "datestamp": "1581640483",
@@ -4940,9 +5045,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.5",
                     "datestamp": "1576656784",
@@ -5182,9 +5284,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-beta7",
                     "datestamp": "1582198326",
