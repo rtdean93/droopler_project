@@ -29,7 +29,7 @@ This code includes:
 ```sh
 $ composer create-project droptica/droopler-project <path> "^8.2.0"
 $ cd droopler
-$ composer install
+$ composer install (or COMPOSER_MEMORY_LIMIT=-1 composer install)
 ```
 
 The *composer install* must be run here to put some external assets into proper directories. The scaffold command makes sure that all files like *index.php* are on their place.
